@@ -119,13 +119,15 @@ public class DrinkShopController {
             alert.setHeaderText("Selectati o reteta pentru care adugati un produs");
             alert.showAndWait();
             return;
-        }else
-        if (service.getAllProducts().stream().filter(p->p.getId()==r.getId()).toList().size()>0) {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Error");
-            alert.setHeaderText("Exista un produs cu reteta adaugata.");
-            alert.showAndWait();
-            return;
+        }else {
+            ArrayList<Product> s = (ArrayList<Product>) service.getAllProducts();
+            if (!s.isEmpty() && s.stream().filter(p -> p.getId() == r.getId()).toList().size() > 0) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Error");
+                alert.setHeaderText("Exista un produs cu reteta adaugata.");
+                alert.showAndWait();
+                return;
+            }
         }
         Product p = new Product(r.getId(),
                 txtProdName.getText(),
