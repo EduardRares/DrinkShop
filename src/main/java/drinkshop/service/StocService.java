@@ -33,6 +33,9 @@ public class StocService {
     }
 
     public boolean areSuficient(Reteta reteta) {
+        if (reteta == null) {
+            return false;
+        }
         List<IngredientReteta> ingredienteNecesare = reteta.getIngrediente();
 
         for (IngredientReteta e : ingredienteNecesare) {
@@ -70,7 +73,7 @@ public class StocService {
                 if (ramas <= 0) break;
 
                 double deScazut = Math.min(s.getCantitate(), ramas);
-                s.setCantitate((int)(s.getCantitate() - deScazut));
+                s.setCantitate(s.getCantitate() - deScazut);
                 ramas -= deScazut;
 
                 stocRepo.update(s);

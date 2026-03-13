@@ -26,27 +26,43 @@ public class FileOrderRepository
 
     @Override
     protected Order extractEntity(String line) {
-
-        // Format: id,productId:qty|productId:qty,total
+        // Format: id,products,total
+        // products: id:qty|id:qty
         String[] parts = line.split(",");
-
-        int id = Integer.parseInt(parts[0]);
-
-        List<OrderItem> items = new ArrayList<>();
-        String[] products = parts[1].split("\\|");
-
-        for (String product : products) {
-            String[] prodParts = product.split(":");
-
-            int productId = Integer.parseInt(prodParts[0]);
-            int quantity = Integer.parseInt(prodParts[1]);
-
-            items.add(new OrderItem(productRepository.findOne(productId), quantity));
+        if (parts.length < 3) {
+            // Log error or ignore
+            return null;
         }
 
-        double totalPrice = Double.parseDouble(parts[2]);
+        try {
+            int id = Integer.parseInt(parts[0]);
 
-        return new Order(id, items, totalPrice);
+            List<OrderItem> items = new ArrayList<>();
+            // Check if parts[1] is not empty
+            if (!parts[1].isEmpty()) {
+                String[] products = parts[1].split("\\|");
+
+                for (String product : products) {
+                    String[] prodParts = product.split(":");
+                    if (prodParts.length < 2) continue;
+
+                    int productId = Integer.parseInt(prodParts[0]);
+                    int quantity = Integer.parseInt(prodParts[1]);
+
+                    Product p = productRepository.findOne(productId);
+                    if (p != null) {
+                        items.add(new OrderItem(p, quantity));
+                    }
+                }
+            }
+
+            double totalPrice = Double.parseDouble(parts[2]);
+
+            return new Order(id, items, totalPrice);
+        } catch (NumberFormatException e) {
+            // Log parse error
+            return null;
+        }
     }
 
     @Override
