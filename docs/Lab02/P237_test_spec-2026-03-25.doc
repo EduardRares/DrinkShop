@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><title>testspec Proiect237 - tcir3643_BBT</title>
+<link type="text/css" rel="stylesheet" href="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo"  width= height= src="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></p></div>
+<div class="doc_title"><p>Test Specification</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Proiect237<br/>Test Suite: Proiect237 - tcir3643_BBT</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 25/03/2026</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><p style="padding-left: 20px;"><b><a href="#toc_1">1.tcir3643_BBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc28707">P237-18: ECP_Valid_AdaugareProdus</a></p><p style="padding-left: 45px;"><a href="#toc_tc28713">P237-19: ECP_Invalid_AdaugareProdus_PretNegativ</a></p><p style="padding-left: 45px;"><a href="#toc_tc28717">P237-20: BVA_Valid_AdaugareProdus_LimitaPret</a></p><p style="padding-left: 45px;"><a href="#toc_tc28719">P237-21: BVA_Invalid_AdaugareProdus_SubLimita</a></p></div><h1 class="doclevel" >Scope</h1>
+<div class="txtlevel"><p>Proiect de testare pentru studentii din grupa 237.</p></div>
+ <br/><a name='toc_1'></a>
+<h1 class='doclevel'>1.Test Suite : tcir3643_BBT</h1>
+<div><p>Suita pentru laboratorul 2</p>
+</div><a name="toc_tc28707"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case P237-18: ECP_Valid_AdaugareProdus&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">tcir3643</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Testăm adăugarea unui produs cu valori valide din clasele de echivalență acceptate (ex: preț pozitiv, nume valid).</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Sistemul trebuie să fie pornit și utilizatorul logat. Nu există deja un produs cu ID-ul pe care vrem să-l adăugăm.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">tcir3643_F01:  tcir3643_F01 [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc28713"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case P237-19: ECP_Invalid_AdaugareProdus_PretNegativ&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">tcir3643</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Testăm adăugarea unui produs introduc&acirc;nd o valoare dintr-o clasă de echivalență invalidă (ex: preț negativ).</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Sistemul trebuie să fie pornit.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">tcir3643_F01:  tcir3643_F01 [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc28717"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case P237-20: BVA_Valid_AdaugareProdus_LimitaPret&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">tcir3643</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Testăm adăugarea unui produs folosind o valoare aflată fix pe limita inferioară validă (ex: prețul este minimul acceptat, exact 1).</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Sistemul trebuie să fie pornit și utilizatorul logat.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">tcir3643_F01:  tcir3643_F01 [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc28719"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case P237-21: BVA_Invalid_AdaugareProdus_SubLimita&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">tcir3643</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Testăm adăugarea unui produs folosind o valoare aflată imediat sub limita validă (limita invalidă, ex: prețul este exact 0).</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Sistemul trebuie să fie pornit și utilizatorul logat.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">tcir3643_F01:  tcir3643_F01 [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+
+</body>
+</html>
