@@ -41,13 +41,27 @@ public class OrderService {
     }
 
     public double computeTotal(Order o) {
-        return o.getItems().stream()
-                .mapToDouble(i -> {
-                    Product p = productRepo.findOne(i.getProduct().getId());
-                    if (p == null) return 0.0;
-                    return p.getPret() * i.getQuantity();
-                })
-                .sum();
+        if (o == null) {
+            return 0.0;
+        }
+
+        List<OrderItem> items = o.getItems();
+        if (items == null || items.isEmpty()) {
+            return 0.0;
+        }
+
+        double total = 0.0;
+        for (OrderItem item : items) {
+            if (item != null && item.getProduct() != null) {
+                Product p = productRepo.findOne(item.getProduct().getId());
+                if (p != null) {
+                    if (item.getQuantity() > 0) {
+                        total += p.getPret() * item.getQuantity();
+                    }
+                }
+            }
+        }
+        return total;
     }
 
     public void addItem(Order o, OrderItem item) {
