@@ -121,7 +121,7 @@ public class DrinkShopController {
             return;
         }else {
             ArrayList<Product> s = (ArrayList<Product>) service.getAllProducts();
-            if (!s.isEmpty() && s.stream().filter(p -> p.getId() == r.getId()).toList().size() > 0) {
+            if (!s.isEmpty() && s.stream().filter(p -> p.getId() == r.getId()).collect(Collectors.toList()).size() > 0) {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Error");
                 alert.setHeaderText("Exista un produs cu reteta adaugata.");
